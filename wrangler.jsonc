@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "uiowa-crwc-collector",
+  "compatibility_date": "2026-09-12",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "uiowa-crwc-occupancy",
+      "database_id": "eba86420-0605-4e25-9721-18b911a35843",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "main": "src/worker.ts",
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": {
+    "crons": [
+      "*/10 * * * *"
+    ]
+  },
+  "vars": {
+    "CRWC_TIMEOUT_MS": "15000"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "uiowa-crwc-dashboard",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2026-09-18",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "uiowa-crwc-occupancy",
+    "database_id": "eba86420-0605-4e25-9721-18b911a35843"
+  }],
+  "observability": { "enabled": true }
+}
