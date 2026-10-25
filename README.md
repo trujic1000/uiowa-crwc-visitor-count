@@ -1,8 +1,6 @@
 # Iowa CRWC Visitor Count
 
-A small historical occupancy tracker, starting with a local source probe.
-
-For current project status, deployment history, and next steps, read the [agent handoff](docs/handoff.md) (updated September 13, 2026).
+A historical occupancy tracker and dashboard for the University of Iowa Campus Recreation & Wellness Center.
 
 Live dashboard: [CRWC occupancy](https://uiowa-crwc-dashboard.atrujic.workers.dev). Reads production D1 directly.
 
@@ -41,9 +39,9 @@ Output includes per-location measurements, fetch time in UTC, selected HTTP cach
 
 ## Stack
 
-TanStack Start, TypeScript, Tailwind CSS, Recharts; Cloudflare Workers and D1 with direct SQL. A separate scheduled collector uses a configurable 10-minute interval. The D1 database and initial migration have been created locally and remotely. The collector is deployed and collecting every ten minutes. The first dashboard is implemented locally in `dashboard/`; see its [setup guide](dashboard/README.md).
+TanStack Start, TypeScript, Tailwind CSS, Recharts; Cloudflare Workers and D1 with direct SQL. A separate scheduled collector uses a configurable 10-minute interval. The D1 database and initial migration have been created locally and remotely. The collector is deployed and collecting every ten minutes. The dashboard is implemented in `dashboard/` and deployed separately; see its [setup guide](dashboard/README.md).
 
-See `docs/source-investigation.md` for the endpoint, observed fields, and outstanding questions.
+See `docs/source-investigation.md` for the endpoint, observed fields, and collection decisions.
 
 ## Run the collector locally
 
